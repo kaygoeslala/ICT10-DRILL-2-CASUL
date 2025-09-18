@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DRILL 2 PYTHON STUDENT INFORMATION</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+      body {
+        font-family: "Courier New", monospace;
+        background: #ffe6f2;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h2 {
+        text-align: center;
+        color: #d63384;
+      }
+      .form-box {
+        background: #fff0f6;
+        border: 2px solid #f8a1c4;
+        border-radius: 16px;
+        padding: 20px;
+        width: 320px;
+        box-shadow: 0 6px 12px rgba(255, 102, 178, 0.2);
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin: 10px 0;
+      }
+      label {
+        display: inline-block;
+        width: 70px;
+        font-weight: bold;
+        color: #c2185b;
+      }
+      input {
+        padding: 6px;
+        border: 1px solid #f8a1c4;
+        border-radius: 5px;
+        width: 200px;
+      }
+      button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: #ff66b2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: #e0559f;
+      }
+      #output {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-family: 'Courier New', monospace;
+      }
+      .card {
+        background: white;
+        border: 2px solid #f8a1c4;
+        border-radius: 16px;
+        box-shadow: 0 6px 12px rgba(255,102,178,0.2);
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+      }
+      .card h3 {
+        margin-bottom: 15px;
+        color: #d63384;
+      }
+      .card p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #5a1846;
+      }
+      .note {
+        margin-top: 15px;
+        font-style: italic;
+        color: #8e3d6a;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🌸 Student Info Form 🌸</h2>
+
+    <div class="form-box">
+      <div class="form-group">
+        <label>♦︎Name:</label>
+        <input id="name" type="text">
+      </div>
+      <div class="form-group">
+        <label>♦︎Age:</label>
+        <input id="age" type="number">
+      </div>
+      <div class="form-group">
+        <label>♦︎School:</label>
+        <input id="school" type="text">
+      </div>
+      <button id="submit-btn">♥︎ Generate Profile</button>
+    </div>
+
+    <div id="output"></div>
+
+    <py-config>
+      [[fetch]]
+      files = ["main.py"]
+    </py-config>
+
+    <script type="py" src="main.py"></script>
+  </body>
+</html>
+
+
